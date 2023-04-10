@@ -9,7 +9,11 @@
 #============================================================
 
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.233.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
+# change irq default value
+sed -i "s/enabled '0'/enabled '1'/g" feeds/packages/utils/irqbalance/files/irqbalance.config
+# Modify default theme（FROM uci-theme-bootstrap CHANGE TO luci-theme-neobird）
+sed -i 's/luci-theme-bootstrap/luci-theme-neobird/g' ./feeds/luci/collections/luci/Makefile
 
 # Modify hostname
 #sed -i 's/OpenWrt/360T7/g' package/base-files/files/bin/config_generate
