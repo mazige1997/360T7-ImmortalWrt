@@ -10,5 +10,5 @@
 
 # fw876/helloworld
 echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
-# add luci-app-passwall
-svn checkout  https://github.com/haiibo/openwrt-packages/trunk/luci-app-passwall package/luci-app-passwall
+# add luci-app-passwall from kenzok8
+svn checkout  https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall package/luci-app-passwall
